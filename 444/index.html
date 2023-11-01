@@ -36,13 +36,13 @@
 
         }
         .box2{
-            width: 200px;
+            /*width: 200px;
             height: 100px;
             background-color: beige;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
-            border-bottom-left-radius: 20px;
+            border-bottom-left-radius: 20px;*/
         }
         
         .box3{
@@ -52,8 +52,9 @@
             /*margin-bottom: 10px;
             margin-right: 50px;*/
             margin : 20px 40px;
-            padding-top: 20px;
+            padding-top: 10px;
             padding-left:10px ;
+            box-sizing: border-box;
 
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
@@ -78,13 +79,26 @@
             
         }
 
-        .a1{
-            width: 200px;
-        }
-
         .span-box{
                 padding: 50px;
                 display: block;
+        }
+
+        .box6{
+            width: 200px;
+            height: 100px;
+            background-color: rgb(19, 230, 245);
+            display: inline-block
+            
+        }
+
+        .box7{
+            width: 200px;
+            height: 100px;
+            background-color: rgb(93, 53, 53);
+            padding: 50px;
+            box-sizing: border-box;
+            display: inline-block
         }
     </style>
 
@@ -100,11 +114,14 @@
     <div class="box3">
         <div class="box5"></div>
     </div>
-    <div class="box4"></div>
+    <div class="box4">
+    </div>
     <span class="span-box">
         內容
     </span>
-    <img class="a1" src="/111/shaoz.jpeg"
+    <hr>
+    <div class="box6"></div>
+    <div class="box7"></div>
 
 </body>
 </html>
