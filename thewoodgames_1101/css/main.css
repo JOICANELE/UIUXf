@@ -18,9 +18,12 @@ ul {
     padding: 0;
   }
 
+
 .main{
-    width: 980px;
+    width: 100%;
+    max-width: 980px; /*最大縮放寬度*/
     margin: 0 auto;
+    padding: 0 15px;
     /*background-color: blanchedalmond;*/
 }
 .main>header{
@@ -28,14 +31,20 @@ ul {
 }
 
 .main>header>img.logo{
-    width: 150px;
+    width: 200px;
     margin-top: 40px;
     margin-bottom: 40px;
+    /*display: block;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;*/
 }
 
 .main>nav{
-    border-top: 4px solid #8a8000;
-    border-bottom: 4px solid #8a8000;
+    border-top: 2px solid #8a8000;
+    border-bottom: 2px solid #8a8000;
     margin-bottom: 20px;
     /*background-color: aqua;*/
 }
@@ -51,9 +60,60 @@ ul {
     font-weight: bold;
 }
 
+.main>nav>ul>li>.nav_item{
+    text-decoration: none; /*超連結底線消掉*/
+    color: #000000;
+    display: block;
+    position: relative;
+}
+
+.main>nav>ul>li>.nav_item>.nav_child{
+    /*background-color: #8a8000;*/
+    display: none; /*擴展伸縮*/
+    position: absolute;
+    width: 100%;
+
+}
+
+.main>nav>ul>li>.nav_item>.nav_child a{
+    line-height: 25px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #8a8000;
+    display: block;
+    font-size: 20px;
+    padding: 15px 25px;
+    text-align: left; /*靠左*/
+}
+
+.main>nav>ul>li>.nav_item>.nav_child a:hover{
+    background-color: #000000;
+}
+
+.main>nav>ul>li>.nav_item:hover .nav_child{
+    display: block;
+}
+
+.main>nav>ul>li>.nav_item:hover{
+    background-color: #DCDDDD;
+}
+
+
+.content img{
+    width: 100%;
+}
 .ew{
     color: #8a8000;
 }
+
+
+
+
+
+
+
+
+
 
 
 
