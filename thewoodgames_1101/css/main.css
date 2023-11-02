@@ -30,7 +30,7 @@ ul {
     text-align: center;
 }
 
-.main>header>img.logo{
+.main>header img.logo{
     width: 200px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -49,10 +49,26 @@ ul {
     /*background-color: aqua;*/
 }
 
+.main>nav>ul{
+    display: flex;
+}
+
 .main>nav>ul>li{
     /*background-color: aqua;*/
-    display: inline-block;
-    width: 33%;
+    
+    /*
+    display inline-block的排版方式
+    */
+    /*display: inline-block;
+    width: 33%;*/
+
+    /*
+    display flex的排版方式
+    */
+    flex: 1;
+
+    
+
     text-align: center;
     height: 75px;
     line-height: 75px;
@@ -104,6 +120,87 @@ ul {
 }
 .ew{
     color: #8a8000;
+}
+
+/*shop.html的css*/
+.main>.shop_content>.p_content{
+    color: #585958;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.shop_content>.item_wrap{
+    border: 1px solid #8a8000;
+}
+
+.shop_content>.item_wrap>.item_row{
+    display: flex;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.main>.shop_content>.item_wrap>.item_row>div{
+    flex: 1;
+}
+
+.shop_content>.item_wrap>.item_row>.item_right .item_tittle{
+    border-bottom: 1px solid #8a8000;
+    padding-bottom: 3px;
+    font-size: 20px;
+}
+
+.shop_content>.item_wrap>.item_row>.item_right .item_child{
+    display: flex;
+}
+
+.price_text{
+    color: #8a8000;
+    font-size: 17px;
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+
+.game_text{
+    line-height: 19px;
+    font-size: 15px;
+}
+
+.buy_btn{
+    margin-top: 10px;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    background-color: #8a8000;
+    padding: 10px 7px;
+    display: block;
+    border-radius: 14px; /*框邊角度*/
+
+}
+
+.buy_btn:hover{
+    background-color: #000000;
+}
+
+.shop_content>.item_wrap>.item_row>.item_middle{
+
+}
+
+.footer{
+    text-align: center;
+}
+
+@media(max-width:992px){
+    .main>nav>ul{
+        flex-direction: column;
+    }
+    
+    .main>nav>ul>li{
+        /*background-color: aquamarine;*/
+        width: 100%;
+    }
 }
 
 
