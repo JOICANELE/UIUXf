@@ -67,8 +67,6 @@ ul {
     */
     flex: 1;
 
-    
-
     text-align: center;
     height: 75px;
     line-height: 75px;
@@ -81,6 +79,8 @@ ul {
     color: #000000;
     display: block;
     position: relative;
+    width: 100%;
+    z-index: 5;
 }
 
 .main>nav>ul>li>.nav_item>.nav_child{
@@ -88,7 +88,6 @@ ul {
     display: none; /*擴展伸縮*/
     position: absolute;
     width: 100%;
-
 }
 
 .main>nav>ul>li>.nav_item>.nav_child a{
@@ -133,16 +132,61 @@ ul {
 
 .shop_content>.item_wrap{
     border: 1px solid #8a8000;
+    font-weight: bold;
 }
 
 .shop_content>.item_wrap>.item_row{
     display: flex;
     padding: 15px;
-    font-weight: bold;
+    gap: 15px;
+    border-bottom:  1px solid #898000;
 }
 
-.main>.shop_content>.item_wrap>.item_row>div{
-    flex: 1;
+.shop_content>.item_wrap>.item_row>.item_child
+
+
+
+
+/*.shop_content>.item_wrap>.item_row>div{
+    flex: 1; /*自動撐開 平均分配
+}*/
+
+.shop_content>.item_wrap>.item_row>.item_left{
+    width: 20%;
+}
+
+.shop_content>.item_wrap>.item_row>.item_left img{
+    width: 100%;
+}
+
+.shop_content>.item_wrap>.item_row>.item_middle{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    /*position: relative;
+    */
+}
+
+
+
+.price{
+    color: #827B00;
+    font-size: 20px;
+}
+/*.price{
+    position: absolute;
+    bottom: 0;
+}*/
+
+.item_middle>h2{
+    margin: 0;
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: auto;
+}
+
+.shop_content>.item_wrap>.item_row>.item_right{
+    width: 40%;
 }
 
 .shop_content>.item_wrap>.item_row>.item_right .item_tittle{
@@ -153,12 +197,13 @@ ul {
 
 .shop_content>.item_wrap>.item_row>.item_right .item_child{
     display: flex;
+    margin-top: 10px;
 }
 
 .price_text{
     color: #8a8000;
     font-size: 17px;
-    margin-top: 8px;
+    margin-top: 7px;
     margin-bottom: 3px;
 }
 
@@ -168,15 +213,16 @@ ul {
 }
 
 .buy_btn{
+    margin-left: 100px;
     margin-top: 10px;
-    margin-left: 50px;
     text-decoration: none;
     font-size: 20px;
-    color: white;
-    background-color: #8a8000;
-    padding: 10px 7px;
+    background: #827B00;
+    color: #fff;
+    padding: 7px;
     display: block;
     border-radius: 14px; /*框邊角度*/
+    /*display: flex;*/
 
 }
 
@@ -184,24 +230,74 @@ ul {
     background-color: #000000;
 }
 
-.shop_content>.item_wrap>.item_row>.item_middle{
-
+footer{
+    background-color: #898000;
+    margin-top: 50px;
 }
 
-.footer{
-    text-align: center;
+/*flex 解決方案*/
+footer>.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*垂直置中*/
+    height: 120px;
+    /*padding-top: 50px;*/  
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;  
+}
+footer>.main>ul{
+    display: flex;
+    font-size: 20px;
+    margin-right: auto;
+    gap: 15px;
 }
 
-@media(max-width:992px){
+footer>.main>ul>li>a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer>.main>ul:hover{
+    border-bottom: 1px solid #fff;
+    padding: 7px;
+}
+
+/*flex 解決方案2*/
+/*footer>.main{
+    display: flex;
+    height: 120px;
+    padding-top: 20px;
+}
+footer>.main>ul{
+    display: flex;
+    margin-right: auto;
+}*/
+
+/*@media(max-width:992px){
     .main>nav>ul{
         flex-direction: column;
     }
     
     .main>nav>ul>li{
-        /*background-color: aquamarine;*/
         width: 100%;
     }
-}
+
+    .shop_content>.item_wrap>.item_row {
+        flex-direction: column;
+    }
+    .shop_content>.item_wrap>.item_row>.item_left{
+        width: 100%;
+    }
+
+    .shop_content>.item_wrap>.item_row>.item_middle{
+        width: 100%;
+    }
+
+    .shop_content>.item_wrap>.item_row>.item_right{
+        width: 100px;
+    }    
+    }*/
 
 
 
